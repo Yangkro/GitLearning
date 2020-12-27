@@ -37,7 +37,7 @@ git config --global user.name 'xxxx'
 
 ### 版本回滚`git reset `
 
-首先使用`git log`来查看版本日志，确定回滚的版本号，然后使用指令`git reset --hard 版本号`
+首先使用`git log`来查看版本日志，确定回滚的版本号，然后使用指令`git reset --hard 版本号`。由于回退到之前的版本之后使用`git log`无法查看到回退之后的版本信息，因此如果想再次回到之前的版本，我们需要进行`git reflog`查看日志来获取版本号
 
 ```
 git reset --hard [versionnumber]
@@ -45,3 +45,6 @@ git reset --hard [versionnumber]
 
 
 
+### 撤销更改总结
+
+- 从工作区变动后回到变动前`git checkout -- 文件名`。会将指定的且被Git管理的文件，有改动的红色状态，变为改动之前的绿色状态
