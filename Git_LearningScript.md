@@ -35,5 +35,13 @@ git config --global user.name 'xxxx'
 
 - 版本库
 
-### 版本回滚`git `
+### 版本回滚`git reset `
+
+首先使用`git log`来查看版本日志，确定回滚的版本号，然后使用指令`git reset --hard 版本号`
+
+```
+git reset --hard [versionnumber]
+```
+
+
 
