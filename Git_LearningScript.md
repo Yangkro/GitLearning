@@ -48,3 +48,4 @@ git reset --hard [versionnumber]
 ### 撤销更改总结
 
 - 从工作区变动后回到变动前`git checkout -- 文件名`。会将指定的且被Git管理的文件，有改动的红色状态，变为改动之前的绿色状态。（作用相当于Crtl+Z）
+- 从暂存区（git add之后）回退到变动未提交（红色工作区）`git rest HEAD 文件名称`
