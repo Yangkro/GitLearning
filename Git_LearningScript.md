@@ -8,8 +8,32 @@
 语法：`git status`。可以显示，如果文件已经被Git进行管理，将会显示绿色，如果文件没有被Git进行管理或者文件被修改了，文件为红色。
 
 ### git增加管理文件
-语法：`git add xxx`。使用git add指令可以将文件加入git管理，后面跟文件名。使用`git add .`指令可以将当前文件夹（没有在git ignore中配置的文集）中所有问价加入git管理
+语法：`git add xxx`。使用git add指令可以将文件加入git管理，后面跟文件名。使用`git add .`指令可以将当前文件夹（没有在git ignore中配置的文集）中所有问价加入git管理。将文件提交到暂存区，提交暂存区的文件会变成绿色的
 
-### 增加git版本
-语法：`git commit -m '描述信息'`。使用git commit可以生成一次当前文件的版本。使用git status后可以查看当前git所有管理的文件状态，例如文件是否被修改
+### git个人配置
+
+如果是电脑第一次安装运行git需要进行git配置，配置用户名和邮箱等信息，如果没有进行个人配置，那么在生成版本的时候会报错（git commit）<font color='red'>只需要配置一次</font>
+
+```
+git config --global user.email 'xxxxx'
+git config --global user.name 'xxxx'
+```
+
+### 增加`git commit`版本
+语法：`git commit -m '描述信息'`。使用git commit可以生成一次当前文件的版本，将暂存区的代码提交到版本库。使用git status后可以查看当前git所有管理的文件状态，例如文件是否被修改(在上一个版本的基础上）。
+
+### 查看版本的记录`git log`
+语法：`git log`。使用git log可以查看当前文件的git提交日志，即所有的提交版本，版本排序是根据时间最近优先的
+
+### git的三大区域
+
+- 工作区（部分红色）
+
+  正在工作的文件夹，分为两个部分：以管理文件、修改文件或新增文件，自动检测
+
+- 暂存区（绿色）
+
+- 版本库
+
+### 版本回滚`git `
 
